@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; worker-src 'self' blob:; connect-src 'self' https://media-cdn.epicgames.com; img-src 'self' data: file: https://cdn.cloudflare.steamstatic.com https://shared.akamai.steamstatic.com https://cdn1.epicgames.com https://cdn2.unrealengine.com https://images.gog-statics.com; media-src 'self' file: https://cdn.cloudflare.steamstatic.com https://media-cdn.epicgames.com; style-src 'self' 'unsafe-inline'">
+  <title>Launcher</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-tab="games" data-zone="row">
+  <div id="bg">
+    <div class="layer"></div><div class="layer"></div>
+    <video id="system-hero-video" muted loop playsinline aria-hidden="true"></video>
+  </div>
+  <div id="shade"></div>
+
+  <header id="top">
+    <nav>
+      <button class="tab active" data-tab="games">Games</button>
+      <button class="tab" data-tab="media">Media</button>
+    </nav>
+    <div id="libhead">
+      <button class="ico back" id="back" aria-label="Volver"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4 7 12l8 8"/></svg></button>
+      <h1>Biblioteca de juegos</h1>
+    </div>
+    <div id="explorehead">
+      <button class="ico back" id="explore-back" aria-label="Volver"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4 7 12l8 8"/></svg></button>
+      <h1>Explorar</h1>
+    </div>
+    <div id="storehead">
+      <button class="ico back" id="store-back" aria-label="Volver"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4 7 12l8 8"/></svg></button>
+      <h1>Tienda</h1>
+    </div>
+    <div class="right">
+      <button class="ico" aria-label="Buscar"><img src="assets/search.svg" width="26" height="26" alt="buscar del sistema, icono de lupa"></button>
+      <button class="ico" aria-label="Ajustes">
+        <img src="assets/settings.svg" width="26" height="26" alt="Ajustes del sistema, icono de engranaje">
+        </button>
+        <button class="ico" aria-label="Perfil">
+          <span class="avatar" style="display:block; width:40px; height:40px; min-width:26px; min-height:26px; aspect-ratio:1/1; border-radius:50%; overflow:hidden; flex-shrink:0;">
+            <img src="assets/avatar.png" width="26" height="26" alt="Avatar del usuario, icono de persona" style="width:100%; height:100%; object-fit:cover; display:block; border-radius:50%;">
+          </span>
+        </button>
+      <span id="clock">--:--</span>
+    </div>
+  </header>
+
+  <section id="shelf">
+    <div id="rail"><div id="row"></div></div>
+    <section id="explore-preview" aria-label="Novedades recientes">
+      <div id="explore-preview-rail"></div>
+    </section>
+  </section>
+
+  <main id="hero">
+    <video id="bg-video" muted loop playsinline></video>
+    <div class="info">
+      <div id="gl-main">
+      </div>
+    </div>
+    <div class="actions">
+      <button class="btn play" id="play">Play</button>
+      <button class="btn more" id="more" aria-label="Más opciones"><svg width="24" height="6" viewBox="0 0 24 6" fill="#fff"><circle cx="3" cy="3" r="2.4"/><circle cx="12" cy="3" r="2.4"/><circle cx="21" cy="3" r="2.4"/></svg></button>
+    </div>
+  </main>
+
+  <section id="library">
+    <div class="subtabs">
+      <button class="stab active" data-s="installed">Instalado</button>
+      <button class="stab" data-s="owned">Tu colección</button>
+      <button class="stab" data-s="stores">Tiendas</button>
+    </div>
+    <div class="infobar">
+      <button id="sortbtn" class="fbtn" aria-label="Cambiar orden"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h11M4 17h6"/></svg></button>
+      <button id="refbtn" class="fbtn" aria-label="Buscar juegos de nuevo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.6-5.9M20 4v5h-5"/></svg></button>
+      <span id="count"></span>
+      <span id="sortlabel"></span>
+    </div>
+    <div id="viewport"><div id="lgrid"></div></div>
+    <div id="side">
+      <button class="stile"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"><path d="M3 8h4l1.6-2.4h6.8L17 8h4v11H3z"/><circle cx="12" cy="13" r="3.6"/></svg><span>Capturas</span></button>
+      <button class="stile"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"><path d="M7 7h10a4 4 0 0 1 4 4.4l-.6 4.6a2.4 2.4 0 0 1-4.2 1.2L14.6 15H9.4l-1.6 2.2a2.4 2.4 0 0 1-4.2-1.2L3 11.400A4 4 0 0 1 7 7z"/><path d="M8 10v3M6.500 11.500h3"/></svg><span>Mandos</span></button>
+    </div>
+    <div id="stores"></div>
+  </section>
+
+  <section id="explore" aria-label="Novedades de las tiendas">
+    <div class="explore-intro">
+      <div>
+        <h2>Novedades de tus tiendas</h2>
+        <p>Lanzamientos, próximos juegos y promociones de Steam, Epic Games y GOG.</p>
+      </div>
+    </div>
+    <div id="explore-filters" aria-label="Filtrar por tienda">
+      <button class="explore-filter active" data-store="all">Todas</button>
+      <button class="explore-filter" data-store="steam">Steam</button>
+      <button class="explore-filter" data-store="epic">Epic Games</button>
+      <button class="explore-filter" data-store="gog">GOG</button>
+      <button id="explore-refresh" class="refresh-btn">Actualizar</button>
+    </div>
+    <div id="explore-status" role="status" aria-live="polite"></div>
+    <div id="explore-errors"></div>
+    <div id="explore-viewport"><div id="explore-grid"></div></div>
+  </section>
+
+  <section id="store" aria-label="Ofertas y juegos gratis">
+    <div class="store-intro">
+      <div>
+        <h2>Ofertas y juegos gratis</h2>
+        <p>Promociones de Steam y GOG, y juegos gratis de Epic Games.</p>
+      </div>
+    </div>
+    <div id="store-filters" aria-label="Filtrar ofertas">
+      <button class="store-filter active" data-kind="all">Todo</button>
+      <button class="store-filter" data-kind="offer">Ofertas</button>
+      <button class="store-filter" data-kind="free">Juegos gratis</button>
+      <button id="store-refresh" class="refresh-btn">Actualizar</button>
+    </div>
+    <div id="store-status" role="status" aria-live="polite"></div>
+    <div id="store-errors"></div>
+    <div id="store-viewport"><div id="store-grid"></div></div>
+  </section>
+
+  <div id="media">Tu música y videos van aquí</div>
+  <div id="toast"></div>
+  <script src="node_modules/hls.js/dist/hls.min.js"></script>
+  <script src="renderer.js"></script>
+</body>
+</html>

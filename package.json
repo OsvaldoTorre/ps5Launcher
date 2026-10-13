@@ -1,0 +1,16 @@
+{
+  "name": "ps5-launcher",
+  "version": "1.0.0",
+  "description": "Launcher de juegos de PC con UI estilo PlayStation 5",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "start:full": "electron . --fullscreen"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0"
+  },
+  "dependencies": {
+    "hls.js": "^1.7.3"
+  }
+}

@@ -1,0 +1,177 @@
+[
+  {
+    "id": "miles-morales",
+    "title": "Marvel's Spider-Man: Miles Morales",
+    "logoTop": "MARVEL",
+    "logo": "Spider-Man",
+    "logoSub": "Miles Morales",
+    "tagline": "Be Greater. Be Yourself.",
+    "colors": [
+      "#e0561b",
+      "#8f1d2c",
+      "#0a0c14"
+    ],
+    "exe": "",
+    "uri": "",
+    "cover": "",
+    "hero": "",
+    "store": "steam",
+    "installed": true
+  },
+  {
+    "id": "ape-escape",
+    "title": "Ape Escape",
+    "tagline": "",
+    "colors": [
+      "#ffb42e",
+      "#e8442f",
+      "#12141c"
+    ],
+    "exe": "",
+    "store": "local",
+    "installed": true
+  },
+  {
+    "id": "assassins",
+    "title": "Assassin's Creed",
+    "tagline": "",
+    "colors": [
+      "#6b7078",
+      "#2a2d33",
+      "#0b0c10"
+    ],
+    "exe": "",
+    "store": "epic",
+    "installed": true
+  },
+  {
+    "id": "god-of-war",
+    "title": "God of War",
+    "tagline": "",
+    "colors": [
+      "#4f9aa8",
+      "#254a63",
+      "#08121a"
+    ],
+    "exe": "",
+    "store": "steam",
+    "installed": true
+  },
+  {
+    "id": "fifa",
+    "title": "FIFA 21",
+    "tagline": "",
+    "colors": [
+      "#7b4cff",
+      "#ff7a2f",
+      "#0d0b1a"
+    ],
+    "exe": "",
+    "store": "epic",
+    "installed": true
+  },
+  {
+    "id": "astro",
+    "title": "Astro's Playroom",
+    "tagline": "",
+    "colors": [
+      "#1f6bff",
+      "#18c0ff",
+      "#050a1c"
+    ],
+    "exe": "",
+    "store": "local",
+    "installed": true
+  },
+  {
+    "id": "ghost",
+    "title": "Ghost of Tsushima",
+    "tagline": "",
+    "colors": [
+      "#c9c3b8",
+      "#5b5a58",
+      "#0d0d0f"
+    ],
+    "exe": "",
+    "store": "steam",
+    "installed": true
+  },
+  {
+    "id": "days-gone",
+    "title": "Days Gone",
+    "tagline": "",
+    "colors": [
+      "#a89a7a",
+      "#4d4a3a",
+      "#0e0e0b"
+    ],
+    "exe": "",
+    "store": "steam",
+    "installed": false
+  },
+  {
+    "id": "pathless",
+    "title": "The Pathless",
+    "tagline": "",
+    "colors": [
+      "#2fd6a0",
+      "#1b6b8f",
+      "#06141a"
+    ],
+    "exe": "",
+    "store": "epic",
+    "installed": false
+  },
+  {
+    "id": "hollow-knight",
+    "title": "Hollow Knight",
+    "tagline": "",
+    "colors": [
+      "#9fb4d9",
+      "#3a4a7a",
+      "#080b16"
+    ],
+    "exe": "",
+    "store": "gog",
+    "installed": true
+  },
+  {
+    "id": "witcher3",
+    "title": "The Witcher 3: Wild Hunt",
+    "tagline": "",
+    "colors": [
+      "#c8a64a",
+      "#6b1f1f",
+      "#0c0a08"
+    ],
+    "exe": "",
+    "store": "gog",
+    "installed": true
+  },
+  {
+    "id": "hades",
+    "title": "Hades",
+    "tagline": "",
+    "colors": [
+      "#ff5a3c",
+      "#7a1030",
+      "#0d0508"
+    ],
+    "exe": "",
+    "store": "epic",
+    "installed": false
+  },
+  {
+    "id": "alan-wake-2",
+    "title": "Alan Wake 2",
+    "tagline": "",
+    "colors": [
+      "#2fbf8f",
+      "#1a3d4a",
+      "#05090b"
+    ],
+    "exe": "",
+    "store": "epic",
+    "installed": false
+  }
+]

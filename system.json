@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "items": {
+    "library": {
+      "title": "Biblioteca de juegos",
+      "tagline": "Tu colección, lista para jugar.",
+      "colors": ["#5668d8", "#173d66", "#070a14"]
+    },
+    "explore": {
+      "title": "Explorar",
+      "tagline": "Descubre novedades de Steam, Epic Games y GOG.",
+      "colors": ["#26a6cb", "#174b70", "#070a14"]
+    },
+    "store": {
+      "title": "Tienda",
+      "tagline": "Ofertas y juegos gratis de Steam, Epic Games y GOG.",
+      "colors": ["#d88935", "#75431f", "#070a14"]
+    }
+  },
+  "resources": {
+    "icons": {
+      "library": "assets/system/library-icon.svg",
+      "explore": "assets/system/explore-icon.svg",
+      "store": "assets/system/store-icon.svg"
+    },
+    "images": {
+      "libraryHero": "assets/system/library-hero.svg",
+      "exploreHero": "assets/system/explore-hero.svg"
+    },
+    "sounds": {
+      "select": "assets/system/ps5-selection-button.mp3",
+      "back": "assets/system/ps5-back-button.mp3",
+      "scroll": "assets/system/ps5-scroll.mp3"
+    },
+    "videos": {
+      "libraryHero": "",
+      "exploreHero": ""
+    }
+  }
+}
